@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>我的第一個遊戲網站</title>
+    <style>
+        /* 這是隱藏畫面的 CSS */
+        .hidden { display: none; }
+        
+        /* 簡單的樣式 */
+        .page { padding: 20px; border: 1px solid #ccc; }
+    </style>
 </head>
 <body>
-    <h1>歡迎來到我的遊戲網站！</h1>
-    <p>這是我第一次在 GitHub 上架設的頁面，未來這裡會放我的遊戲。</p>
+
+    <div id="home-page" class="page">
+        <h1>歡迎來到遊戲主選單</h1>
+        <button onclick="showPage('game-page')">開始遊戲</button>
+    </div>
+
+    <div id="game-page" class="page hidden">
+        <h1>遊戲進行中！</h1>
+        <p>在這裡放你的遊戲動畫與抓取定位功能。</p>
+        <button onclick="showPage('home-page')">回首頁</button>
+    </div>
+
+    <script>
+        // 切換畫面的核心函數
+        function showPage(pageId) {
+            // 1. 先把所有 page 隱藏
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.add('hidden');
+            });
+            // 2. 把指定的 page 顯示出來
+            document.getElementById(pageId).classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
