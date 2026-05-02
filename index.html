@@ -2,11 +2,34 @@
 <html>
 <head>
     <style>
-        /* 這是隱藏畫面的 CSS */
-        .hidden { display: none; }
-        
-        /* 簡單的樣式 */
-        .page { padding: 20px; border: 1px solid #ccc; }
+    /* 1. 設定整體畫面置中 */
+    body {
+        margin: 0;
+        height: 100vh;          /* 強制 body 高度為整個螢幕高度 */
+        display: flex;          /* 啟用 Flexbox 排版 */
+        justify-content: center; /* 水平置中 */
+        align-items: center;     /* 垂直置中 */
+        font-family: sans-serif; /* 設定字體 */
+    }
+
+    /* 2. 讓畫面內容區塊也置中對齊 */
+    .page {
+        text-align: center;      /* 讓裡面的文字和按鈕置中 */
+        padding: 40px;
+        border: 2px solid #ccc;
+        border-radius: 15px;     /* 圓角更漂亮 */
+    }
+
+    /* 3. 調整按鈕大小 */
+    button {
+        padding: 15px 30px;      /* 設定按鈕內距，讓按鈕變大 */
+        font-size: 20px;         /* 調整按鈕文字大小 */
+        cursor: pointer;         /* 滑鼠游標變成手指 */
+        margin-top: 20px;        /* 與上方文字拉開距離 */
+    }
+
+    /* 隱藏畫面的設定保持不變 */
+    .hidden { display: none; }
     </style>
 </head>
 <body>
