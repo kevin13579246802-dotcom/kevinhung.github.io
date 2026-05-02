@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>早餐吃到飽挑戰賽</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         /* --- 1. 背景與整體設定 --- */
         body {
@@ -58,6 +59,31 @@
         }
 
         .hidden { display: none; }
+        /* 當螢幕寬度小於 600px 時 (手機模式) */
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 28px; /* 手機上字體大一點 */
+            }
+            
+            p {
+                font-size: 18px;
+            }
+            
+            button {
+                width: 80%;      /* 讓按鈕變寬，填滿手機螢幕大部分寬度 */
+                padding: 20px;   /* 增加點擊區域，避免手指太粗按不到 */
+                font-size: 20px;
+            }
+        
+            .page {
+                width: 90%;      /* 讓卡片不要太窄 */
+                padding: 20px;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
     </style>
 </head>
 <body>
